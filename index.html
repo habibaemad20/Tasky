@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tasky</title>
+<meta name="description" content="Elegant Todo App to manage your daily tasks efficiently.">
+<meta name="keywords" content="todo, task, notes, productivity, tasks">
+<meta name="author" content="Habiba">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&family=DM+Serif+Text:ital@0;1&family=Italianno&family=Libertinus+Keyboard&family=Lilita+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playwrite+CU+Guides&family=Playwrite+ES:wght@100..400&family=Titan+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="icon" href="images/icon.png">
+<link rel="stylesheet" href="CSS/all.min.css">
+<link rel="stylesheet" href="CSS/style.min.css">
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body class="light-mode">
+
+<header>
+  <h1>Welcome to Tasky 👀</h1>
+  <button id="toggle-mode"><i class="fas fa-moon"></i></button>
+</header>
+
+<main>
+  <!-- tasks  -->
+  <section class="container">
+    <h2>My Tasks <i class="fa-solid fa-list-check"></i></h2>
+
+    <form class="add-task" onsubmit="event.preventDefault(); addTask();">
+      <input type="text" id="taskInput" placeholder="Add new task..." required>
+      <select id="taskCategory"style="color: #777;">
+   <option value="Study">Study📚</option>
+        <option value="Work">Work💼</option>
+        <option value="Personal">Personal👤</option>
+        <option value="Other">Other📌</option>
+      </select>
+      <input style="color: #777;"  type="date" id="taskDate">
+      <button type="submit"><i class="fa fa-plus"></i></button>
+    </form>
+
+    <div class="search">
+      <input type="text" id="searchInput" placeholder="Search tasks..." onkeyup="searchTasks()">
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <div class="task-footer">
+      <span id="count">0 Tasks</span>
+      <button onclick="clearAll()">Clear All</button>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+
+  <div class="left">
+    <div class="footer-social">
+     <a href="https://github.com/habibaemad20" target="_blank"> <i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/habiba-emad-0a6505357" target="_blank"> <i class="fab fa-linkedin"></i></a>
+    </div>
+    <p class="copy">&copy; 2026 Made by Habiba Emad</p>
+  </div>
+  <div class="feedback">
+     <p>Don't forget<span class="iconco"> 💬</span></p>
+    <p>Your Feedback Matters❕</p>
+   
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScNfZtbs-vXR-FH6_T6UMxNpmNGQmi3blBFBb-vrM1YfOXpIQ/viewform"
+       target="_blank"
+       class="feedback-btn">
+      Send Feedback
+    </a>
+  </div>
+
+</footer>
+
+<script src="js/main_.js"></script>
+</body>
+</html>
+
+
+<!--  <h5>Your Feedback Matters</h5> -->
