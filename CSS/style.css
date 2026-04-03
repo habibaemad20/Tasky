@@ -49,11 +49,11 @@ body::before,body::after {
 body.light-mode::before {
   background-image: radial-gradient(rgb(152, 168, 123) 4px, transparent 5px), radial-gradient(rgba(152, 168, 123, 0.6) 6px, transparent 7px);
   background-size: 120px 120px, 190px 190px;
-  animation: moveCir 120s linear infinite;
+  animation: moveCir 105s linear infinite;
 }
 body.light-mode::after {
   background-image: radial-gradient(circle at 20% 30%, rgb(152, 168, 123) 10px, transparent 10px), radial-gradient(circle at 70% 70%, rgb(112, 77, 57) 8px , transparent 9px);
-  animation: circles 4s infinite alternate;
+  animation: circles 5s infinite alternate;
 }
 body.dark-mode {
   background: var(--bg-dark);
@@ -67,7 +67,7 @@ body.dark-mode::after {
 body.dark-mode::before {
   background-image: radial-gradient(#fef3c7 0.5px, transparent 1px), radial-gradient(#fde68a 4px, transparent 4px);
   background-size: 120px 120px, 190px 190px;
-  animation: stars 60s linear infinite;
+  animation: stars 54s linear infinite;
 }
 @keyframes moveCir {
   0% {background-position: 0 0, 0 0;}
@@ -425,8 +425,6 @@ body.dark-mode .container {
   }
 }
 
-
-/* 💻 Small Laptops */
 @media (max-width: 1024px) {
 
   .container {
